@@ -70,6 +70,7 @@ User=root
 Type=simple
 ExecStart=/usr/bin/geth \
   --holesky \
+  --port 30304 \
   --authrpc.addr 0.0.0.0 \
   --authrpc.port 8553 \
   --authrpc.vhosts=* \
