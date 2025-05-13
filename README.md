@@ -16,7 +16,7 @@
 `source .env`
 
 
-`sudo ufw enablesudo ufw enable`
+`sudo ufw enable`
 
 `sudo ufw allow 22`
 
