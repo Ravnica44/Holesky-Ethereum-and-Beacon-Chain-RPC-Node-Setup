@@ -22,7 +22,6 @@ ExecStart=/root/.cargo/bin/lighthouse bn \
   --metrics-address 0.0.0.0 \
   --metrics-port 5057 \
   --port 9002
-  --disable-upnp
 Restart=on-failure
 LimitNOFILE=65535
 
