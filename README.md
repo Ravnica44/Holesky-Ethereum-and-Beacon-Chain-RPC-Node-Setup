@@ -24,6 +24,10 @@
 
 `sudo ufw allow $LIGHTHOUSE_WS_PORT/tcp`
 
+`sudo ufw enablesudo ufw enable`
+
+
+`sudo systemctl daemon-reexec`
 
 `systemctl daemon-reload`
 
