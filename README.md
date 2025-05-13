@@ -16,6 +16,16 @@
 `source .env`
 
 
+`sudo ufw enablesudo ufw enable`
+
+`sudo ufw allow 22`
+
+`sudo ufw allow ssh`
+
+`sudo ufw allow $P2P_GETH_PORT/tcp`
+
+`sudo ufw allow $P2P_GETH_PORT/udp`
+
 `sudo ufw allow $GETH_HTTP_PORT/tcp`
 
 `sudo ufw allow $GETH_WS_PORT/tcp`
@@ -24,7 +34,7 @@
 
 `sudo ufw allow $LIGHTHOUSE_WS_PORT/tcp`
 
-`sudo ufw enablesudo ufw enable`
+
 
 
 `sudo systemctl daemon-reexec`
