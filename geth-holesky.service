@@ -27,8 +27,7 @@ ExecStart=/usr/bin/geth \
   --datadir /root/holesky-node/data/geth \
   --verbosity 3 \
   --cache=4096 \
-  --txlookuplimit=0 \
-  --maxpeers=100 \
+  --maxpeers=100
 Restart=on-failure
 LimitNOFILE=65535
 
