@@ -13,9 +13,19 @@
 `nano /etc/systemd/system/lighthouse-holesky.service`
 
 
+`source .env`
+
+
+`sudo ufw allow $GETH_HTTP_PORT/tcp`
+
+`sudo ufw allow $GETH_WS_PORT/tcp`
+
+`sudo ufw allow $LIGHTHOUSE_HTTP_PORT/tcp`
+
+`sudo ufw allow $LIGHTHOUSE_WS_PORT/tcp`
+
 
 `systemctl daemon-reload`
-
 
 
 `systemctl enable geth-holesky.service`
