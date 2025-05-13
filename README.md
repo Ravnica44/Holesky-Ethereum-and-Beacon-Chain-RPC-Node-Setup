@@ -75,7 +75,8 @@ curl -s -X POST -H "Content-Type: application/json" \
 http://localhost:${HTTP_GETH_PORT} | jq
 ```
 
-
-
+```
+curl -s http://localhost:${HTTP_LIGHTHOUSE_PORT}/eth/v1/node/syncing | jq
+```
 
 
