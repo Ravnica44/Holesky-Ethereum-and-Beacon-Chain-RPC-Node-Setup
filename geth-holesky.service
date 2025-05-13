@@ -25,7 +25,7 @@ ExecStart=/usr/bin/geth \
   --syncmode "full" \
   --gcmode=full \
   --datadir /root/holesky-node/data/geth \
-  --verbosity 3
+  --verbosity 3 \
   --cache=4096 \
   --txlookuplimit=0 \
   --maxpeers=100 \
