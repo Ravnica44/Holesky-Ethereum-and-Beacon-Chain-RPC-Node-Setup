@@ -3,7 +3,7 @@
 `chmod 600 /root/holesky-node/.env`
 
 
-`openssl rand -hex 32 > /root/holesky-node/data/jwtsecret`$
+`openssl rand -hex 32 > /root/holesky-node/data/jwtsecret`
 
 `chmod 600 /root/holesky-node/data/jwtsecret`
 
