@@ -1,4 +1,3 @@
-
 [Unit]
 Description=Lighthouse Ethereum Client - Holesky Testnet
 After=network.target geth-holesky.service
@@ -16,6 +15,9 @@ ExecStart=/root/.cargo/bin/lighthouse bn \
   --http \
   --http-address 0.0.0.0 \
   --http-port 5056 \
+  --ws \
+  --ws-address 0.0.0.0 \
+  --ws-port 5058 \
   --metrics \
   --metrics-address 0.0.0.0 \
   --metrics-port 5057 \
