@@ -20,7 +20,8 @@ ExecStart=/root/.cargo/bin/lighthouse bn \
   --port ${P2P_LIGHTHOUSE_PORT} \
   --target-peers 25 \
   --logfile ${LIGHTHOUSE_LOGFILE} \
-  --logfile-compress
+  --logfile-compress \
+  --logfile-level warn
 
 Restart=on-failure
 RestartSec=5
