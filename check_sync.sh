@@ -12,7 +12,7 @@ while true; do
     # Get local block
     local_block_hex=$(curl -s --max-time 10 -X POST -H "Content-Type: application/json" \
     --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
-    http://localhost:8550 | jq -r '.result')
+    http://localhost:${HTTP_GETH_PORT} | jq -r '.result')
 
     # Get remote block
     remote_block_hex=$(curl -s --max-time 10 "https://api-holesky.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=$ETHERSCAN_API_KEY" | jq -r '.result')
@@ -36,7 +36,7 @@ while true; do
         echo "✅ Node is fully synced."
     else
         blocks_behind=$((remote_block - local_block))
-        sync_percent=$(awk "BEGIN { printf \"%.2f\", 100 * $local_block / $remote_block }")
+        sync_percent=$(awk "BEGIN { printf \"%.3f\", 100 * $local_block / $remote_block }")
         echo "⏳ Syncing... $blocks_behind blocks behind ($sync_percent% complete)."
     fi
 
