@@ -24,7 +24,6 @@ ExecStart=/usr/bin/geth \
   --gcmode=full \
   --datadir ${GETH_DATADIR} \
   --verbosity 1 \
-  --logtostderr \
   --cache=1024 \
   --maxpeers=25 \
   --txlookuplimit=0 \
