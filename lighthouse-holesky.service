@@ -17,7 +17,6 @@ ExecStart=/root/.cargo/bin/lighthouse bn \
   --http \
   --http-address ${LISTEN_ADDRESS} \
   --http-port ${HTTP_LIGHTHOUSE_PORT} \
-  --max-peers 25 \
   --log-level warn \
   --port ${P2P_LIGHTHOUSE_PORT}
 
