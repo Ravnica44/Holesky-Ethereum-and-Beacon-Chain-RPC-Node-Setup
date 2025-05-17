@@ -21,7 +21,7 @@ ExecStart=/root/.cargo/bin/lighthouse bn \
   --target-peers 25 \
   --logfile ${LIGHTHOUSE_LOGFILE} \
   --logfile-compress \
-  --logfile-level warn
+  --log-level warn
 
 Restart=on-failure
 RestartSec=5
