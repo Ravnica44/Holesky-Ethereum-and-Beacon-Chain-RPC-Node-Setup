@@ -1,3 +1,11 @@
+`mkdir -p /root/holesky-node/data/geth`
+
+`mkdir -p /root/holesky-node/data/lighthouse`
+
+`mkdir -p /root/holesky-node/data`
+
+
+
 `nano /root/holesky-node/.env`
 
 `chmod 600 /root/holesky-node/.env`
@@ -28,12 +36,7 @@
 
 `sudo ufw allow $GETH_HTTP_PORT/tcp`
 
-`sudo ufw allow $GETH_WS_PORT/tcp`
-
 `sudo ufw allow $LIGHTHOUSE_HTTP_PORT/tcp`
-
-`sudo ufw allow $LIGHTHOUSE_WS_PORT/tcp`
-
 
 
 
