@@ -6,11 +6,8 @@ Wants=network.target
 [Service]
 User=root
 Type=simple
-
-# Load environment variables from the .env file
 EnvironmentFile=/root/holesky-node/.env
 
-# Run Geth with environment variables
 ExecStart=/usr/bin/geth \
   --holesky \
   --port ${P2P_GETH_PORT} \
@@ -21,15 +18,17 @@ ExecStart=/usr/bin/geth \
   --http \
   --http.addr ${LISTEN_ADDRESS} \
   --http.port ${HTTP_GETH_PORT} \
-  --http.api eth,net,engine,admin,web3 \
+  --http.api eth,net,engine,web3 \
   --http.corsdomain "*" \
   --syncmode "snap" \
   --gcmode=full \
   --datadir ${GETH_DATADIR} \
-  --verbosity 3 \
-  --cache=4096 \
-  --maxpeers=100 \
-  --txlookuplimit=0
+  --verbosity 1 \
+  --logtostderr \
+  --cache=1024 \
+  --maxpeers=25 \
+  --txlookuplimit=0 \
+  --ipcdisable
 
 Restart=on-failure
 RestartSec=5
@@ -37,3 +36,4 @@ LimitNOFILE=65535
 
 [Install]
 WantedBy=default.target
+
