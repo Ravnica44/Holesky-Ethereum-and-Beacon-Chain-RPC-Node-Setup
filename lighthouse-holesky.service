@@ -6,8 +6,6 @@ Wants=network.target geth-holesky.service
 [Service]
 User=root
 Type=simple
-
-# Load environment variables from the .env file
 EnvironmentFile=/root/holesky-node/.env
 
 ExecStart=/root/.cargo/bin/lighthouse bn \
