@@ -10,7 +10,6 @@ Type=simple
 # Load environment variables from the .env file
 EnvironmentFile=/root/holesky-node/.env
 
-# Run Lighthouse with environment variables
 ExecStart=/root/.cargo/bin/lighthouse bn \
   --network holesky \
   --datadir ${LIGHTHOUSE_DATADIR} \
@@ -20,9 +19,8 @@ ExecStart=/root/.cargo/bin/lighthouse bn \
   --http \
   --http-address ${LISTEN_ADDRESS} \
   --http-port ${HTTP_LIGHTHOUSE_PORT} \
-  --metrics \
-  --metrics-address ${LISTEN_ADDRESS} \
-  --metrics-port ${METRICS_PORT} \
+  --max-peers 25 \
+  --log-level warn \
   --port ${P2P_LIGHTHOUSE_PORT}
 
 Restart=on-failure
@@ -31,3 +29,4 @@ LimitNOFILE=65535
 
 [Install]
 WantedBy=default.target
+
