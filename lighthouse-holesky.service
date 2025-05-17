@@ -20,9 +20,6 @@ ExecStart=/root/.cargo/bin/lighthouse bn \
   --http \
   --http-address ${LISTEN_ADDRESS} \
   --http-port ${HTTP_LIGHTHOUSE_PORT} \
-  --ws \
-  --ws-address ${LISTEN_ADDRESS} \
-  --ws-port ${WS_LIGHTHOUSE_PORT} \
   --metrics \
   --metrics-address ${LISTEN_ADDRESS} \
   --metrics-port ${METRICS_PORT} \
