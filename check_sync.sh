@@ -1,18 +1,22 @@
 #!/bin/bash
 
-# === Load environment variables from .env if it exists ===
-if [ -f .env ]; then
-    export $(grep -v '^#' .env | xargs)
+# === Load environment variables from the .env file ===
+ENV_FILE="/root/holesky-node/.env"
+if [ -f "$ENV_FILE" ]; then
+    export $(grep -v '^#' "$ENV_FILE" | xargs)
+else
+    echo "❌ Environment file not found: $ENV_FILE"
+    exit 1
 fi
 
-# === Validate required environment variables ===
+# === Check required environment variables ===
 if [ -z "$ETHERSCAN_API_KEY" ]; then
-    echo "❌ ETHERSCAN_API_KEY is not set. Define it in .env or export it."
+    echo "❌ ETHERSCAN_API_KEY is not set. Define it in $ENV_FILE."
     exit 1
 fi
 
 if [ -z "$HTTP_GETH_PORT" ]; then
-    echo "❌ HTTP_GETH_PORT is not set. Define it in .env or export it."
+    echo "❌ HTTP_GETH_PORT is not set. Define it in $ENV_FILE."
     exit 1
 fi
 
@@ -31,7 +35,6 @@ while true; do
         "https://api-holesky.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=$ETHERSCAN_API_KEY" \
         | jq -r '.result')
 
-    # Debug (optional)
     echo "DEBUG local_block_hex: $local_block_hex"
     echo "DEBUG remote_block_hex: $remote_block_hex"
 
