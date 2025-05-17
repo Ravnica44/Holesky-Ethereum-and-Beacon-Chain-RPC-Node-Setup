@@ -40,7 +40,7 @@
 
 
 
-`sudo systemctl daemon-reexec`
+`systemctl daemon-reexec`
 
 `systemctl daemon-reload`
 
