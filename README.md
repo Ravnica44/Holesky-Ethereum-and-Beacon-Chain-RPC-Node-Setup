@@ -94,11 +94,12 @@ curl -s http://localhost:${HTTP_LIGHTHOUSE_PORT}/eth/v1/node/syncing | jq
 ```
 
 ```
-geth attach http://localhost:${HTTP_LIGHTHOUSE_PORT}
+geth attach http://localhost:${HTTP_GETH_PORT}
 ```
 
 ```
 eth.syncing
 ```
 
+EXIT
 
