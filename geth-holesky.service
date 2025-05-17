@@ -23,7 +23,7 @@ ExecStart=/usr/bin/geth \
   --syncmode "snap" \
   --gcmode=full \
   --datadir ${GETH_DATADIR} \
-  --verbosity 1 \
+  --verbosity 3 \
   --cache=1024 \
   --maxpeers=25 \
   --txlookuplimit=0 \
