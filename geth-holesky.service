@@ -18,7 +18,7 @@ ExecStart=/usr/bin/geth \
   --http \
   --http.addr ${LISTEN_ADDRESS} \
   --http.port ${HTTP_GETH_PORT} \
-  --http.api eth,net,engine,web3 \
+  --http.api eth,net,web3 \
   --http.corsdomain "*" \
   --syncmode "snap" \
   --gcmode=full \
