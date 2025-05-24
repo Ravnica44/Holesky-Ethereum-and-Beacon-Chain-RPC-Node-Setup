@@ -93,10 +93,6 @@ LimitNOFILE=65535
 [Install]
 WantedBy=default.target
 EOF
-
-# 🔄 Reload systemd
-sudo systemctl daemon-reload
-
 ```
 
 Create lighthouse service file:
@@ -134,10 +130,6 @@ LimitNOFILE=65535
 [Install]
 WantedBy=default.target
 EOF
-
-# 🔄 Reload systemd
-sudo systemctl daemon-reload
-
 ```
 
 ### 5. Create .env file
