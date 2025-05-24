@@ -200,8 +200,19 @@ systemctl status lighthouse-holesky.service
 # View logs
 journalctl -u geth-holesky.service -f
 journalctl -u lighthouse-holesky.service -f
-```
 
+# Restart services
+systemctl restart geth-holesky.service
+systemctl restart lighthouse-holesky.service
+
+# Stop services
+systemctl stop geth-holesky.service
+systemctl stop lighthouse-holesky.service
+
+# Disable services
+systemctl disable geth-holesky.service
+systemctl disable lighthouse-holesky.service
+```
 
 ## 🔐 (Optional) Open Firewall Ports
 
@@ -221,6 +232,36 @@ sudo ufw reload
 Once opened, you can access RPC or Beacon API from other machines via:
 - Geth RPC: `http://<your-ip>:$HTTP_GETH_PORT`
 - Beacon API: `http://<your-ip>:$HTTP_LIGHTHOUSE_PORT`
+
+### 8. Monitor Sync
+
+```bash
+curl -s http://localhost:${HTTP_LIGHTHOUSE_PORT}/eth/v1/node/syncing | jq
+
+# Expecting Output
+{
+  "data": {
+    "is_syncing": false,
+    "is_optimistic": false,
+    "el_offline": false,
+    "head_slot": "*******",
+    "sync_distance": "0"
+```
+
+```bash
+geth attach http://localhost:${HTTP_GETH_PORT}
+# Expecting Output
+Welcome to the Geth JavaScript console!
+
+instance: Geth/v1.15.11-stable-36b2371c/linux-amd64/go1.24.2
+at block: ******** (*** *** ** **** **:**:** ***+**** (****))
+ modules: eth:1.0 net:1.0 rpc:1.0 web3:1.0
+
+To exit, press ctrl-d or type exit
+> eth.syncing
+false
+> exit
+```
 
 
 
