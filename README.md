@@ -10,28 +10,28 @@ To run the Holesky node as systemd services using binary installations:
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install -y ethereum
-# check geth installed
+# Check geth installed
 geth --version
 ```
 
 #### Install lighthouse
 ```bash
 cd $HOME
-# install Rust
+# Install Rust
 curl https://sh.rustup.rs -sSf | sh
 
-# source:
+# Source
 source $HOME/.cargo/env
 
-# install lighthouse from source:
+# Install lighthouse from source
 git clone https://github.com/sigp/lighthouse.git
 cd lighthouse
 make
 
-#check if successfully install:
+# Check if successfully install
 ls -l /root/.cargo/bin/lighthouse
 
-#output expected:
+# Output expected
 # -rwxr-xr-x 1 root root ... /root/.cargo/bin/lighthouse
 ```
 
