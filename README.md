@@ -170,9 +170,6 @@ LIGHTHOUSE_LOGFILE=/root/holesky-node/data/lighthouse/beacon/logs/beacon.log
 # check_sync.sh apy key from https://docs.etherscan.io/etherscan-v2/getting-started/getting-an-api-key
 ETHERSCAN_API_KEY=
 EOF
-
-chmod 600 /root/holesky-node/.env
-source .env
 ```
 
 ### 6. Enable and Start Services
