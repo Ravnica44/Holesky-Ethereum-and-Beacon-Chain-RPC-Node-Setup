@@ -232,7 +232,7 @@ Once opened, you can access RPC or Beacon API from other machines via:
 
 ### 8. Monitor Sync
 
-1. Check Beacon Node Sync Status (Lighthouse)
+#### 1. Check Beacon Node Sync Status (Lighthouse)
 ```bash
 curl -s http://localhost:${HTTP_LIGHTHOUSE_PORT}/eth/v1/node/syncing | jq
 
@@ -246,7 +246,7 @@ curl -s http://localhost:${HTTP_LIGHTHOUSE_PORT}/eth/v1/node/syncing | jq
     "sync_distance": "0"
 ```
 
-2. Check Execution Layer Sync Status (Geth)
+#### 2. Check Execution Layer Sync Status (Geth)
 ```bash
 geth attach http://localhost:${HTTP_GETH_PORT}
 
@@ -263,7 +263,7 @@ false # Expected result
 > exit
 ```
 
-3. Automated Script for Sync Check (Holesky Node)
+#### 3. Automated Script for Sync Check (Holesky Node)
 ```bash
 # Download the script
 cd holesky-node
