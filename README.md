@@ -263,7 +263,7 @@ false # Expected result
 
 ```bash
 # Download the script
-cd holesky-noe
+cd holesky-node
 curl -O https://raw.githubusercontent.com/Ravnica44/Holesky-Ethereum-and-Beacon-Chain-RPC-Node-Setup/main/check_sync.sh
 
 # Make the script executable
