@@ -261,6 +261,18 @@ false # Expected result
 > exit
 ```
 
+```bash
+# Download the script
+cd holesky-noe
+curl -O https://raw.githubusercontent.com/Ravnica44/Holesky-Ethereum-and-Beacon-Chain-RPC-Node-Setup/main/check_sync.sh
+
+# Make the script executable
+chmod +x check_sync.sh
+
+# Run the script
+./check_sync.sh
+```
+
 
 
 
