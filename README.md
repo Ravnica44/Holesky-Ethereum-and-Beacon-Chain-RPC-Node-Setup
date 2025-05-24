@@ -238,7 +238,7 @@ Once opened, you can access RPC or Beacon API from other machines via:
 ```bash
 curl -s http://localhost:${HTTP_LIGHTHOUSE_PORT}/eth/v1/node/syncing | jq
 
-# Expecting Output
+# Expected Output
 {
   "data": {
     "is_syncing": false,
@@ -250,7 +250,8 @@ curl -s http://localhost:${HTTP_LIGHTHOUSE_PORT}/eth/v1/node/syncing | jq
 
 ```bash
 geth attach http://localhost:${HTTP_GETH_PORT}
-# Expecting Output
+
+# Expected Output
 Welcome to the Geth JavaScript console!
 
 instance: Geth/v1.15.11-stable-36b2371c/linux-amd64/go1.24.2
@@ -259,7 +260,7 @@ at block: ******** (*** *** ** **** **:**:** ***+**** (****))
 
 To exit, press ctrl-d or type exit
 > eth.syncing
-false
+false # Expected result
 > exit
 ```
 
