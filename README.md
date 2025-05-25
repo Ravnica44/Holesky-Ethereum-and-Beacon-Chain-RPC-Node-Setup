@@ -153,7 +153,7 @@ P2P_LIGHTHOUSE_PORT=9000
 
 # Lighthouse parameters
 LIGHTHOUSE_DATADIR=/root/holesky-node/data/lighthouse
-EXECUTION_ENDPOINT=http://localhost:8551
+EXECUTION_ENDPOINT=http://127.0.0.1:8551
 
 # https://github.com/eth-clients/checkpoint-sync-endpoints/tree/main/endpoints
 CHECKPOINT_SYNC_URL=https://checkpoint-sync.holesky.ethpandaops.io
@@ -211,9 +211,10 @@ If you use `ufw` or another firewall, run:
 sudo ufw allow 22
 sudo ufw allow ssh
 sudo ufw allow $P2P_GETH_PORT/tcp
-sudo ufw allow  $P2P_GETH_PORT/udp
+sudo ufw allow $P2P_GETH_PORT/udp
 sudo ufw allow $GETH_HTTP_PORT/tcp
 sudo ufw allow $HTTP_LIGHTHOUSE_PORT/tcp
+sudo ufw allow $AUTHRPC_PORT/tcp
 
 sudo ufw reload
 ```
