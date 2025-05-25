@@ -153,7 +153,7 @@ P2P_LIGHTHOUSE_PORT=9000
 
 # Lighthouse parameters
 LIGHTHOUSE_DATADIR=/root/holesky-node/data/lighthouse
-EXECUTION_ENDPOINT=http://localhost:$HTTP_GETH_PORT
+EXECUTION_ENDPOINT=http://localhost:8551
 
 # https://github.com/eth-clients/checkpoint-sync-endpoints/tree/main/endpoints
 CHECKPOINT_SYNC_URL=https://checkpoint-sync.holesky.ethpandaops.io
